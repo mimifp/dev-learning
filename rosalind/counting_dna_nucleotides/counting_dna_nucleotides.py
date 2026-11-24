@@ -1,24 +1,35 @@
-# Test in file C:/Users/miria/Documents/programacion/rosalind/counting_dna_nucleotides.txt
-
-dna_file = str(input("DNA string file path:"))
-
-with open(dna_file, "r") as f:
-    dna = f.read()
+# Tested in file counting_dna_nucleotides.txt
+def read_file(input_file: str):
+    with open(input_file, "r") as f:
+        dna = f.read() 
+        return dna
 
 def count_nucleotides(dna: str):
     a_count = c_count = g_count = t_count = 0
 
     for letter in dna:
-        if letter.upper() == 'A':
+        if letter.upper() == "A":
             a_count +=1
-        elif letter.upper() == 'C':
+        elif letter.upper() == "C":
             c_count += 1
-        elif letter.upper() == 'G':
+        elif letter.upper() == "G":
             g_count += 1
-        elif letter.upper() == 'T':
+        elif letter.upper() == "T":
             t_count += 1
-    
-    return a_count, c_count, g_count, t_count
+
+    count_list = [a_count, c_count, g_count, t_count]
+
+    return count_list
+
+
+def write_results(count_list: list):
+    with open("./solution.txt", "w", encoding="utf-8") as result:
+        print(count_list[0], count_list[1], count_list[2], count_list[3], sep=",", file = result)
+
 
 if __name__ == "__main__":
-    print(count_nucleotides(dna))
+    input_file = "./counting_dna_nucleotides.txt" 
+    dna = read_file(input_file)
+    counting = count_nucleotides(dna)
+    write_results(counting)
+
