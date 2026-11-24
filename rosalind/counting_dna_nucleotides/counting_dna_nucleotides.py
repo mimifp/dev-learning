@@ -23,8 +23,8 @@ def count_nucleotides(dna: str):
 
 
 def write_results(count_list: list):
-    with open("./solution.txt", "w", encoding="utf-8") as result:
-        print(count_list[0], count_list[1], count_list[2], count_list[3], sep=",", file = result)
+    with open("./solution.txt", "w", encoding="utf-8") as r:
+        print(count_list[0], count_list[1], count_list[2], count_list[3], sep=",", file = r)
 
 
 if __name__ == "__main__":
