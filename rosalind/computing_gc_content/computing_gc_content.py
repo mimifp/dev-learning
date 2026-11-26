@@ -7,7 +7,7 @@ all_sequences = []
 
 for i in range(len(data)):
     if data[i][0] == '>':
-        seq = [data[i][1:]]
+        seq = [data[i]]
         all_sequences.append(seq)
     else:
         seq.append(data[i])    
@@ -25,12 +25,12 @@ result = []
 
 for i in range(0, len(formatted_strings)):
     nucleotides = len(formatted_strings[i][1])
-    str_id = formatted_strings[i][0]
+    rosalind_id = formatted_strings[i][0][1:]
     c_count = formatted_strings[i][1].count('C')
     g_count = formatted_strings[i][1]. count('G')
     gc_value = round((((c_count + g_count) / nucleotides) * 100), 6)
 
-    result.append([gc_value, str_id])
+    result.append([gc_value, rosalind_id])
 
 
 print(max(result)[1])
