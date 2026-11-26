@@ -1,4 +1,5 @@
-[!IMPORTANT](AI free repository)
+> [!WARNING]
+> AI free repository
 
 
 ### Rosalind
