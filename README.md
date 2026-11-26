@@ -1,4 +1,4 @@
 ### Rosalind
-[Exercises](rosalind) avaliables in [ROSALIND project web](https://rosalind.info/problems/). I first try to resolve them with Python language. 
+Solution to available exercises on the [ROSALIND](https://rosalind.info/problems/) project website. I’ll start by solving them using Python.
 
-I am programming tehm like modules, in order to can run tehm by separate in another tools. 
+I’m writing them as modules so that I can run them separately in other tools.
